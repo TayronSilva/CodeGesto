@@ -5,77 +5,65 @@ import { Code2, Settings, ArrowRight } from 'lucide-react';
 const Hero: React.FC = () => {
     return (
         <section style={{
-            minHeight: '90vh',
+            minHeight: '85vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            paddingTop: '120px'
+            paddingTop: '100px'
         }}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="glass" style={{
-                    padding: '8px 20px',
-                    borderRadius: '20px',
+                <div style={{
+                    padding: '6px 16px',
+                    borderRadius: '4px',
+                    background: 'rgba(59, 130, 246, 0.1)',
+                    border: '1px solid rgba(59, 130, 246, 0.2)',
                     display: 'inline-block',
                     marginBottom: '24px',
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     fontWeight: 600,
-                    color: 'var(--accent)'
+                    color: 'var(--primary)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px'
                 }}>
                     Inovação & Eficiência
                 </div>
 
-                <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', marginBottom: '24px' }}>
-                    Gestão Inteligente para <br />
-                    <span className="gradient-text">Seu Próximo Nível</span>
+                <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.2rem)', marginBottom: '20px', lineHeight: 1.1 }}>
+                    Tecnologia de Elite para <br />
+                    <span className="gradient-text">Impulsionar seu Negócio</span>
                 </h1>
 
                 <p style={{
-                    maxWidth: '600px',
-                    margin: '0 auto 40px',
+                    maxWidth: '580px',
+                    margin: '0 auto 32px',
                     color: 'var(--text-muted)',
-                    fontSize: '1.2rem'
+                    fontSize: '1.1rem',
+                    lineHeight: 1.6
                 }}>
-                    Transformamos sua visão em realidade através de programação de elite
-                    e administração estratégica.
+                    Transformamos processos complexos em soluções digitais de alta performance com programação avançada e gestão estratégica.
                 </p>
 
-                <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
                     <button
                         onClick={() => window.open('https://wa.me/5521975946473', '_blank')}
-                        style={{
-                            background: 'var(--primary)',
-                            color: 'white',
-                            padding: '16px 32px',
-                            borderRadius: '12px',
-                            fontWeight: 700,
-                            border: 'none',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '10px',
-                            boxShadow: '0 10px 20px var(--primary-glow)'
-                        }}
+                        className="btn btn-primary"
+                        style={{ padding: '14px 28px', fontSize: '1rem' }}
                     >
-                        Solicitar Orçamento <ArrowRight size={20} />
+                        Solicitar Orçamento <ArrowRight size={18} />
                     </button>
 
                     <button
                         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="glass" style={{
-                            color: 'white',
-                            padding: '16px 32px',
-                            borderRadius: '12px',
-                            fontWeight: 700,
-                            cursor: 'pointer'
-                        }}
+                        className="btn btn-outline"
+                        style={{ padding: '14px 28px', fontSize: '1rem' }}
                     >
-                        Ver Serviços
+                        Nossos Serviços
                     </button>
                 </div>
             </motion.div>
@@ -86,19 +74,19 @@ const Hero: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 1 }}
                 style={{
-                    marginTop: '80px',
+                    marginTop: '60px',
                     display: 'flex',
-                    gap: '60px',
+                    gap: '40px',
                     flexWrap: 'wrap',
                     justifyContent: 'center'
                 }}
             >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'var(--text-muted)' }}>
-                    <Code2 size={24} color="var(--primary)" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                    <Code2 size={20} color="var(--primary)" />
                     <span>Programação</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: 'var(--text-muted)' }}>
-                    <Settings size={24} color="var(--secondary)" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                    <Settings size={20} color="var(--secondary)" />
                     <span>Administração</span>
                 </div>
             </motion.div>
