@@ -49,11 +49,16 @@ const Hero: React.FC = () => {
                     Transformamos processos complexos em soluções digitais de alta performance com programação avançada e gestão estratégica.
                 </p>
 
-                <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                <div style={{
+                    display: 'flex',
+                    gap: '16px',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap'
+                }}>
                     <button
                         onClick={() => window.open('https://wa.me/5521975946473', '_blank')}
                         className="btn btn-primary"
-                        style={{ padding: '14px 28px', fontSize: '1rem' }}
+                        style={{ padding: '14px 28px', fontSize: '1rem', minWidth: '220px' }}
                     >
                         Solicitar Orçamento <ArrowRight size={18} />
                     </button>
@@ -61,7 +66,7 @@ const Hero: React.FC = () => {
                     <button
                         onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                         className="btn btn-outline"
-                        style={{ padding: '14px 28px', fontSize: '1rem' }}
+                        style={{ padding: '14px 28px', fontSize: '1rem', minWidth: '220px' }}
                     >
                         Nossos Serviços
                     </button>

@@ -136,4 +136,18 @@ section {
   section {
     padding: 60px 16px;
   }
+  
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-toggle {
+    display: flex !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
